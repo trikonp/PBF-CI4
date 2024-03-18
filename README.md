@@ -240,7 +240,7 @@ class Pages extends BaseController
 
 ## 9. Struktur Applikasi (CI)
 ![alt text](image-21.png)
-Struktur CodeIgniter terdiri dari :
+ <br /> Struktur CodeIgniter terdiri dari :
 1. app
 app sendiri adalah 
 
