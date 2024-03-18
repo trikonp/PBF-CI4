@@ -1,11 +1,11 @@
 # CodeIgniter 4 
 
-## Pengertian CodeIgniter
+## 1. Pengertian CodeIgniter
 
 CodeIgniter adalah sebuah framework aplikasi berbasis PHP yang digunakan untuk membangun aplikasi WEB. Framework ini dirancang untuk memudahkan pengembangan aplikasi dengan menyediakan alat dan struktur dasar yang telah siap pakai. Dengan CodeIgniter, pengembang dapat mengembangkan aplikasi web dengan cepat dan efisien karena framework ini menyediakan fitur-fitur seperti manajemen database, pengelolaan URL dan sistem templating. [CodeIgniter 4](https://codeigniter.com).
 
 
-## Instal CodeIgniter Menggunakan Composer
+## 2. Instal CodeIgniter Menggunakan Composer
 
 CodeIgniter memiliki dua metode instalasi, yang pertama bisa download secara manual dan yang kedua menggunakan Composer. Disini saya rekomendasikan download CodeIgniter menggunakan Composer karena dapat diperbarui dengan mudah. Caranya yaitu :
 1. Instal [Komposer](https://getcomposer.org/)
@@ -13,11 +13,15 @@ CodeIgniter memiliki dua metode instalasi, yang pertama bisa download secara man
 ```
 composer create-project codeigniter4/appstarter Nama-Project
 ```
-3. Jalankan Project tersebut dengan perintah.
+3. Jalankan Server lokal CodeIgniter dengan perintah dibawah ini
 ```
-composer create-project codeigniter4/appstarter Nama-Project
+php spark serve
 ```
+4. Jalankan Project tersebut dengan cara buka browser lalu isikan (http://localhost:8080)
+![alt text](image.png)
 
+
+## 3. vjvjvj
 
 `composer create-project codeigniter4/appstarter` then `composer update` whenever
 there is a new release of the framework.
