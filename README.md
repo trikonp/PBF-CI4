@@ -248,8 +248,11 @@ public berisi atau file yang berguna untuk menyimpan berbagai asset seperti css,
 3. tests <br />
 test sendiri berfungsi untuk melakukan testing
 4. vendor <br />
-5. writable <br/ >
+Direktori "vendor" biasanya berisi dependensi pihak ketiga yang digunakan dalam pengembangan perangkat lunak. Ini bisa berupa pustaka, framework, atau alat lainnya yang digunakan dalam proyek.
+5. writable <br />
+Ini mengacu pada hak akses tertentu yang diberikan kepada file atau direktori di sistem file. Dalam konteks pengembangan aplikasi web, seringkali ada beberapa file atau direktori yang perlu memiliki izin untuk ditulis oleh aplikasi.
 6. env <br />
+File ".env" (disebut juga sebagai file lingkungan) adalah file konfigurasi yang digunakan untuk menyimpan variabel lingkungan aplikasi, seperti kunci rahasia, pengaturan database, atau pengaturan lingkungan lainnya. 
 
 <br />
 <br />
@@ -258,11 +261,11 @@ test sendiri berfungsi untuk melakukan testing
 ![alt text](image-22.png)
 <br /> MVC adalah singkatan dari Model-View-Controller, sebuah pola desain arsitektur perangkat lunak yang membagi aplikasi menjadi tiga komponen utama:
 
-Model: Bertanggung jawab untuk merepresentasikan data dan logika aplikasi. Ini mengelola data aplikasi, melakukan validasi, dan menerapkan aturan bisnis. Model biasanya tidak tahu tentang tampilan atau bagaimana data tersebut akan ditampilkan kepada pengguna.
+1. Model: Bertanggung jawab untuk merepresentasikan data dan logika aplikasi. Ini mengelola data aplikasi, melakukan validasi, dan menerapkan aturan bisnis. Model biasanya tidak tahu tentang tampilan atau bagaimana data tersebut akan ditampilkan kepada pengguna.
 
-View: Menangani bagaimana data disajikan kepada pengguna. Ini bisa berupa antarmuka pengguna (UI), seperti halaman web atau tampilan aplikasi, yang mempresentasikan informasi dari model kepada pengguna. View hanya bertanggung jawab untuk menampilkan data, tanpa memiliki pengetahuan tentang logika bisnis.
+2. View: Menangani bagaimana data disajikan kepada pengguna. Ini bisa berupa antarmuka pengguna (UI), seperti halaman web atau tampilan aplikasi, yang mempresentasikan informasi dari model kepada pengguna. View hanya bertanggung jawab untuk menampilkan data, tanpa memiliki pengetahuan tentang logika bisnis.
 
-Controller: Menangani interaksi antara pengguna, model, dan view. Controller menerima input dari pengguna, memproses input tersebut (biasanya dengan memanipulasi model), dan memilih tampilan yang sesuai untuk menampilkan hasilnya kepada pengguna. Controller bertindak sebagai perantara antara model dan view, menjaga kohesi dan pemisahan tugas antara keduanya.
+3. Controller: Menangani interaksi antara pengguna, model, dan view. Controller menerima input dari pengguna, memproses input tersebut (biasanya dengan memanipulasi model), dan memilih tampilan yang sesuai untuk menampilkan hasilnya kepada pengguna. Controller bertindak sebagai perantara antara model dan view, menjaga kohesi dan pemisahan tugas antara keduanya.
 
 MVC memungkinkan pengembang untuk memisahkan logika aplikasi, tampilan, dan alur kontrol, sehingga memfasilitasi pengembangan yang terstruktur, modular, dan mudah dipelihara. Ini juga memungkinkan pengembang untuk mengubah satu bagian dari aplikasi tanpa harus mempengaruhi bagian lainnya secara signifikan.
 
