@@ -4,6 +4,8 @@
 
 CodeIgniter adalah sebuah framework aplikasi berbasis PHP yang digunakan untuk membangun aplikasi WEB. Framework ini dirancang untuk memudahkan pengembangan aplikasi dengan menyediakan alat dan struktur dasar yang telah siap pakai. Dengan CodeIgniter, pengembang dapat mengembangkan aplikasi web dengan cepat dan efisien karena framework ini menyediakan fitur-fitur seperti manajemen database, pengelolaan URL dan sistem templating. [CodeIgniter 4](https://codeigniter.com).
 
+![Screenshot (787)](https://github.com/trikonp/PBF-CI4/assets/127200135/07eba501-2640-4403-9259-fc618658acde)
+
 ## Setup
 
 Copy `env` to `.env` and tailor for your app, specifically the baseURL
