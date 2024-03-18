@@ -215,22 +215,40 @@ class Pages extends BaseController
 
 1. buat database dengan nama daftar_manusia, lalu create table dengan sql dibawah ini <br />
 ![alt text](image-13.png)
-2. insertkan data <br />
+2. insertkan data dengan perintah yang sudah dipelajari<br />
 ![alt text](image-14.png)
-3. mengkonfigurasi database masuk ke .env lalu ubah seperti gambar <br />
+3. mengkonfigurasi database masuk ke .env lalu ubah nama database, username, password <br />
 ![alt text](image-15.png)
 
+<br />
+<br />
 
 ## 8. Menampilkan Tabel Database dengan MVC CI
-1. membuat model orang <br />
+1. membuat Models dengan nama file ModelOrang<br />
 ![alt text](image-16.png)
-2. membuat controler orang<br />
+2. membuat controler untuk Orang (tabel yang akan ditampilkan) <br />
 ![alt text](image-17.png)
-3. membuat folder orang pada view lalu tambahkan file index <br />
+3. membuat folder orang pada view lalu tambahkan file index untuk membuat tampilan table orang <br />
 ![alt text](image-18.png)
-4. menambahkan link untuk menuju pada view orang <br />
+4. menambahkan link untuk menuju pada view orang yang terletak di view/layout/header <br />
 ![alt text](image-20.png)
 5. jalankan hasilnya <br />
 ![alt text](image-19.png)
+
+<br />
+<br />
+
+## 9. Struktur Applikasi (CI)
+![alt text](image-21.png)
+Struktur CodeIgniter terdiri dari :
+1. app
+app sendiri adalah 
+
+<br />
+<br />
+
+## 10.
+
+
 
 
