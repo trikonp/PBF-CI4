@@ -10,7 +10,7 @@ CodeIgniter adalah sebuah framework aplikasi berbasis PHP yang digunakan untuk m
 
 CodeIgniter memiliki dua metode instalasi, yang pertama bisa download secara manual dan yang kedua menggunakan Composer. Disini saya rekomendasikan download CodeIgniter menggunakan Composer karena dapat diperbarui dengan mudah. Caranya yaitu :
 
-A. Instal [Komposer](https://getcomposer.org/)
+A. Instal [Komposer](https://getcomposer.org/) <br />
 B. Create CodeIgniter dengan mengetikan perintah dibawah ini pada terminal.
 
 ```
