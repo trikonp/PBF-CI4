@@ -241,13 +241,30 @@ class Pages extends BaseController
 ## 9. Struktur Applikasi (CI)
 ![alt text](image-21.png)
  <br /> Struktur CodeIgniter terdiri dari :
-1. app
-app sendiri adalah 
+1. app <br />
+app sendiri adalah bagian utama dalam CodeIgniter karena didalamnya terdapat config, MVC(model,view, controler) yang merupakan bagian utama.
+2. public <br />
+public berisi atau file yang berguna untuk menyimpan berbagai asset seperti css, img ,dll
+3. tests <br />
+test sendiri berfungsi untuk melakukan testing
+4. vendor <br />
+5. writable <br/ >
+6. env <br />
 
 <br />
 <br />
 
-## 10.
+## 10. Model, View, Controler
+![alt text](image-22.png)
+<br /> MVC adalah singkatan dari Model-View-Controller, sebuah pola desain arsitektur perangkat lunak yang membagi aplikasi menjadi tiga komponen utama:
+
+Model: Bertanggung jawab untuk merepresentasikan data dan logika aplikasi. Ini mengelola data aplikasi, melakukan validasi, dan menerapkan aturan bisnis. Model biasanya tidak tahu tentang tampilan atau bagaimana data tersebut akan ditampilkan kepada pengguna.
+
+View: Menangani bagaimana data disajikan kepada pengguna. Ini bisa berupa antarmuka pengguna (UI), seperti halaman web atau tampilan aplikasi, yang mempresentasikan informasi dari model kepada pengguna. View hanya bertanggung jawab untuk menampilkan data, tanpa memiliki pengetahuan tentang logika bisnis.
+
+Controller: Menangani interaksi antara pengguna, model, dan view. Controller menerima input dari pengguna, memproses input tersebut (biasanya dengan memanipulasi model), dan memilih tampilan yang sesuai untuk menampilkan hasilnya kepada pengguna. Controller bertindak sebagai perantara antara model dan view, menjaga kohesi dan pemisahan tugas antara keduanya.
+
+MVC memungkinkan pengembang untuk memisahkan logika aplikasi, tampilan, dan alur kontrol, sehingga memfasilitasi pengembangan yang terstruktur, modular, dan mudah dipelihara. Ini juga memungkinkan pengembang untuk mengubah satu bagian dari aplikasi tanpa harus mempengaruhi bagian lainnya secara signifikan.
 
 
 
