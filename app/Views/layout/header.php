@@ -9,4 +9,5 @@
     
 <a href="/">Home</a>
 <a href="/pages/about">About</a>
+<a href="/orang/index">Orang</a>
 

@@ -68,6 +68,7 @@ maka akan tampil seperti semula karena pada dasarnya link tersebut mengarah ke c
 <br />
 
 ## 5. Mengubah akses Route
+
 untuk mengubah akses route yang tadinya 'Home::index' menjadi yang diinginkan misalnya halaman About maka langkah awal yaitu 
 1. buat method baru pada Clas Home misal fungsi about dengan nilai kembalian view('about')
 ```
@@ -116,6 +117,7 @@ maka tampilanya akan berubah menjadi Halaman About
 <br />
 
 ## 6. Membuat Halaman Statis dan routesnya
+
 1. buat Controler baru dengan nama Pages
 ![alt text](image-7.png)
 2. lalu isikan file tersebut seperti file home sebelumnya. hanya saja untuk nama classnya disesuiakan. lalu tambahkan fungsi satu lagi yaitu about.
@@ -206,6 +208,29 @@ class Pages extends BaseController
 ![alt text](image-11.png)
 ![alt text](image-12.png)
 
+<br />
+<br />
 
-7. hdbvshbj
+## 7. Membuat database dan Konfigurasi database
+
+1. buat database dengan nama daftar_manusia, lalu create table dengan sql dibawah ini <br />
+![alt text](image-13.png)
+2. insertkan data <br />
+![alt text](image-14.png)
+3. mengkonfigurasi database masuk ke .env lalu ubah seperti gambar <br />
+![alt text](image-15.png)
+
+
+## 8. Menampilkan Tabel Database dengan MVC CI
+1. membuat model orang <br />
+![alt text](image-16.png)
+2. membuat controler orang<br />
+![alt text](image-17.png)
+3. membuat folder orang pada view lalu tambahkan file index <br />
+![alt text](image-18.png)
+4. menambahkan link untuk menuju pada view orang <br />
+![alt text](image-20.png)
+5. jalankan hasilnya <br />
+![alt text](image-19.png)
+
 
