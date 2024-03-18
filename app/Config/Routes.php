@@ -7,4 +7,4 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 $routes->setAutoRoute(true);
-$routes->get('/', 'Home::about');
+$routes->get('/', 'Pages::index');

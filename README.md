@@ -115,30 +115,97 @@ maka tampilanya akan berubah menjadi Halaman About
 <br />
 <br />
 
-## Repository Management
+## 6. Membuat Halaman Statis dan routesnya
+1. buat Controler baru dengan nama Pages
+![alt text](image-7.png)
+2. lalu isikan file tersebut seperti file home sebelumnya. hanya saja untuk nama classnya disesuiakan. lalu tambahkan fungsi satu lagi yaitu about.
+```
+<?php
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+namespace App\Controllers;
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+class Pages extends BaseController
+{
+    public function index()
+    {
+        echo view('pages/index');
+    }
+    public function about()
+    {
+        echo view('pages/about');
+    }
+}
 
-## Server Requirements
+```
+2. lalu buat file dengan nama index dan about didalam folder view. namanya disesuaikan dengan controler yang sudah kita buat sebelumnya supaya tidak terjadi eror. supaya lebih rapih saya buat folder baru dengan nama pages lalu didalamnya diisi file tadi.lalu isikan script html, namun disini saya akan membuat halaman statis jadi untuk file index dan about cukup diisi kontennya saja. untuk header dan footer ditempatkan di folder terpisah
+```
+<h1>Home</h1>
+<h5>Ini Adalah Halaman Home</h5>
+```
+![alt text](image-8.png)
+3. lalu ubah routesnya menjadi Pages::index
+```
+<?php
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+use CodeIgniter\Router\RouteCollection;
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+/**
+ * @var RouteCollection $routes
+ */
 
-> [!WARNING]
-> The end of life date for PHP 7.4 was November 28, 2022.
-> The end of life date for PHP 8.0 was November 26, 2023.
-> If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> The end of life date for PHP 8.1 will be November 25, 2024.
+$routes->setAutoRoute(true);
+$routes->get('/', 'Pages::index');
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+```
+4. kita tes dengan mengetikan url localhost:8080 dan localhost:8080/pages/about
+![alt text](image-9.png)
+5. tambahkan folder layout di view dan tambahkan didalamnya file dengan nama header dan footer
+![alt text](image-10.png)
+6. buat sript html pada header(Biasanya untuk navbar). namun disini saya membuat yang sederhana, seperti berikut. lalu untuk hrefnya sesuikan dengan alamat tampilan yang akan dituju.
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judul</title>
+</head>
+<body>
+    
+<a href="/">Home</a>
+<a href="/pages/about">About</a>
+```
+7. untuk footer diisi seperti berikut.
+```
+</body>
+</html>
+```
+8. tambahkan beberapa metod tambahan pada class Pages
+```
+<?php
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+namespace App\Controllers;
+
+class Pages extends BaseController
+{
+    public function index()
+    {
+        echo view('layout/header');
+        echo view('pages/home');
+        echo view('layout/footer');
+    }
+    public function about()
+    {
+        echo view('layout/header');
+        echo view('pages/about');
+        echo view('layout/footer');
+    }
+}
+```
+9. maka jika kita jalankan akan tampil seperti berikut. dan jika kita click about akan pindah ke halaman about.
+![alt text](image-11.png)
+![alt text](image-12.png)
+
+
+7. hdbvshbj
+

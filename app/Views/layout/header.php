@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman About by Triko</title>
+    <title>Judul</title>
 </head>
 <body>
-    <h1>ini adalah halaman About</h1>
-</body>
-</html>
+    
+<a href="/">Home</a>
+<a href="/pages/about">About</a>
+
