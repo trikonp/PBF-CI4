@@ -8,20 +8,20 @@ CodeIgniter adalah sebuah framework aplikasi berbasis PHP yang digunakan untuk m
 
 CodeIgniter memiliki dua metode instalasi, yang pertama bisa download secara manual dan yang kedua menggunakan Composer. Disini saya rekomendasikan download CodeIgniter menggunakan Composer karena dapat diperbarui dengan mudah. Caranya yaitu :
 
-1. Instal [Komposer](https://getcomposer.org/)
-2. Create CodeIgniter dengan mengetikan perintah dibawah ini pada terminal.
+A. Instal [Komposer](https://getcomposer.org/)
+B. Create CodeIgniter dengan mengetikan perintah dibawah ini pada terminal.
 
 ```
 composer create-project codeigniter4/appstarter Nama-Project
 ```
 
-3. Jalankan Server lokal CodeIgniter dengan perintah dibawah ini
+C. Jalankan Server lokal CodeIgniter dengan perintah dibawah ini
 
 ```
 php spark serve
 ```
 
-4. Jalankan Project tersebut dengan cara buka browser lalu isikan (http://localhost:8080)
+D. Jalankan Project tersebut dengan cara buka browser lalu isikan (http://localhost:8080)
    ![alt text](image.png)
 
 ## 3. Konfigurasi Awal
@@ -33,21 +33,75 @@ untuk mengkonfigurasi $bashURL dapat dilakukan dengan buka project CI tadi, bisa
 disini saya ubah CI_ENVIRONMEN = produktion menjadi developmen , gunanya yaitu supaya dalam membuat atau mengembangkan aplikasi tersebut maka jika terjadi kesalahan akan muncul eror dibagianmana pada tampilan wibesitenya
 lalu menambahkan $bashURL
 
-## 4. 
+## 4. Aturan Perutean
+```
+<?php
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+use CodeIgniter\Router\RouteCollection;
 
-## Important Change with index.php
+/**
+ * @var RouteCollection $routes
+ */
+$routes->get('/', 'Home::index');
 
-`index.php` is no longer in the root of the project! It has been moved inside the _public_ folder,
-for better security and separation of components.
+```
+kode diatas adalah potongan dari file routes.php yang terletak di app/config/routes.php. maksud dari kode diatas yaitu setiap url yang kita jalankan yaitu localhost8080 maka defaultnya mengarahkan ke class Home method index. contohnya jika kita mengakses url localhost8080 maka akan tampil dibawah ini.
+![alt text](image-2.png)
+sebenarnya itu adalah http://localhost:8080/Home/index buktikan
+![alt text](image-3.png)
+jika eror atau not found tambahkan code dibawah ini
+```
+$routes->setAutoRoute(true);
+```
+maka akan tampil seperti semula karena pada dasarnya link tersebut mengarah ke clas Home method index.
+![alt text](image-4.png)
 
-This means that you should configure your web server to "point" to your project's _public_ folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter _public/..._, as the rest of your logic and the
-framework are exposed.
 
-**Please** read the user guide for a better explanation of how CI4 works!
+## 5. Mengubah akses Route
+untuk mengubah akses route yang tadinya 'Home::index' menjadi yang diinginkan misalnya halaman About maka langkah awal yaitu 
+1. buat method baru pada Clas Home misal fungsi about dengan nilai kembalian view('about')
+```
+<?php
+
+namespace App\Controllers;
+
+class Home extends BaseController
+{
+    public function index(): string
+    {
+        return view('welcome_message');
+    }
+
+    public function about(): string
+    {
+        return view('about');
+    }
+}
+
+```
+2. buat file baru untuk mengembalikan nilai view yaitu about
+![alt text](image-5.png)
+lalu isikan dengan kode html karena disini masuk ke aturan MVC yaitu view. misal isianya seperti berikut
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman About by Triko</title>
+</head>
+<body>
+    <h1>ini adalah halaman About</h1>
+</body>
+</html>
+```
+3. lalu ubah aturan pada routesnya menjadi home::about karena kita akan menuju class home method about
+```
+$routes->get('/', 'Home::about');
+```
+maka tampilanya akan berubah menjadi Halaman About
+![alt text](image-6.png)
+
 
 ## Repository Management
 
