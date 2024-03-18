@@ -3,6 +3,8 @@
 ## 1. Pengertian CodeIgniter
 
 CodeIgniter adalah sebuah framework aplikasi berbasis PHP yang digunakan untuk membangun aplikasi WEB. Framework ini dirancang untuk memudahkan pengembangan aplikasi dengan menyediakan alat dan struktur dasar yang telah siap pakai. Dengan CodeIgniter, pengembang dapat mengembangkan aplikasi web dengan cepat dan efisien karena framework ini menyediakan fitur-fitur seperti manajemen database, pengelolaan URL dan sistem templating. [CodeIgniter 4](https://codeigniter.com).
+<br />
+<br />
 
 ## 2. Instal CodeIgniter Menggunakan Composer
 
@@ -24,6 +26,9 @@ php spark serve
 D. Jalankan Project tersebut dengan cara buka browser lalu isikan (http://localhost:8080)
    ![alt text](image.png)
 
+<br />
+<br />
+
 ## 3. Konfigurasi Awal
 
 untuk mengkonfigurasi $bashURL dapat dilakukan dengan buka project CI tadi, bisa menggunakan Visual Studio Code. lalu pergi ke app/config/app.php. disitu $bashURLnya dapat diubah sesuai URL yang dikehendaki. namun cara tersebut kurang efisien karena jika kita akan mengkonfigurasi data base dan lainya harus mencari satu-satu dari folder tersebut. lalu bagaimana cara yang lebih efisien? disini saya gunakan env yang sudah disediakan. cara menggunakanya yaitu ubah file env menjadi .env , lalu hilangkan komentar atau # lalu ubah sesuai kebutuhan.
@@ -32,6 +37,9 @@ untuk mengkonfigurasi $bashURL dapat dilakukan dengan buka project CI tadi, bisa
 
 disini saya ubah CI_ENVIRONMEN = produktion menjadi developmen , gunanya yaitu supaya dalam membuat atau mengembangkan aplikasi tersebut maka jika terjadi kesalahan akan muncul eror dibagianmana pada tampilan wibesitenya
 lalu menambahkan $bashURL
+
+<br />
+<br />
 
 ## 4. Aturan Perutean
 ```
@@ -56,6 +64,8 @@ $routes->setAutoRoute(true);
 maka akan tampil seperti semula karena pada dasarnya link tersebut mengarah ke clas Home method index.
 ![alt text](image-4.png)
 
+<br />
+<br />
 
 ## 5. Mengubah akses Route
 untuk mengubah akses route yang tadinya 'Home::index' menjadi yang diinginkan misalnya halaman About maka langkah awal yaitu 
@@ -79,8 +89,8 @@ class Home extends BaseController
 }
 
 ```
-2. buat file baru untuk mengembalikan nilai view yaitu about
-![alt text](image-5.png)
+2. buat file baru untuk mengembalikan nilai view yaitu about <br />
+![alt text](image-5.png) <br />
 lalu isikan dengan kode html karena disini masuk ke aturan MVC yaitu view. misal isianya seperti berikut
 ```
 <!DOCTYPE html>
@@ -102,6 +112,8 @@ $routes->get('/', 'Home::about');
 maka tampilanya akan berubah menjadi Halaman About
 ![alt text](image-6.png)
 
+<br />
+<br />
 
 ## Repository Management
 
